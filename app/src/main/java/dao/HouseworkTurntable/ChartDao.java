@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-import models.HouseworkTurntable.HouseworkItem;
 import models.HouseworkTurntable.TurntableCountItem;
 
 /**
@@ -64,6 +63,28 @@ public class ChartDao {
             db.close();
         }
         return items;
+    }
+
+    public TurntableCountItem getItem(int hwId) {
+        db = dbHelper.getWritableDatabase();
+        TurntableCountItem item = new TurntableCountItem();
+
+        try {
+            Cursor c = db.rawQuery("select * from " + tab_name + " where houseworkId=?", new String[]{hwId + ""});
+            while (c.moveToNext()) {
+                item.setId(c.getInt(c.getColumnIndex("_id")));
+                item.setHouseworkId(c.getInt(c.getColumnIndex("houseworkId")));
+                item.setHouseworkName(c.getString(c.getColumnIndex("houseworkName")));
+                item.setCountNum(c.getInt(c.getColumnIndex("CountNum")));
+                break;
+            }
+            c.close();
+        } catch (Exception exp) {
+
+        } finally {
+            db.close();
+        }
+        return item;
     }
 
     public void updateHWName(TurntableCountItem item) {
