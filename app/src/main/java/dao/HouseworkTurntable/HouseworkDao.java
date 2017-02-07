@@ -3,13 +3,10 @@ package dao.HouseworkTurntable;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import java.util.ArrayList;
 
 import models.HouseworkTurntable.HouseworkItem;
-
-import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
 
 /**
  * Created by zhangbojin on 1/02/17.
@@ -73,6 +70,27 @@ public class HouseworkDao {
             db.close();
         }
         return items;
+    }
+
+    public HouseworkItem getItem(int id) {
+        db = dbHelper.getWritableDatabase();
+        HouseworkItem item = new HouseworkItem();
+
+        try {
+            Cursor c = db.rawQuery("select * from " + tab_name + " where _id=?", new String[]{id + ""});
+            while (c.moveToNext()) {
+                item.setId(c.getInt(c.getColumnIndex("_id")));
+                item.setName(c.getString(c.getColumnIndex("name")));
+                item.setSelected(c.getInt(c.getColumnIndex("isSelected")) == 0 ? false : true);
+                break;
+            }
+            c.close();
+        } catch (Exception exp) {
+
+        } finally {
+            db.close();
+        }
+        return item;
     }
 
     public void updateSelected(HouseworkItem item) {

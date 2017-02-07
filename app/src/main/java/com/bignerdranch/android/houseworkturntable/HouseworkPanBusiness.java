@@ -9,7 +9,6 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.support.v4.graphics.ColorUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.SurfaceHolder;
@@ -137,7 +136,7 @@ public class HouseworkPanBusiness extends SurfaceView implements SurfaceHolder.C
                     "drawable", "com.bignerdranch.android.houseworkturntable");
 
             mStrs[i] = hwItem.getName();
-            mColors[i] = ColorUtil.getColor();
+            mColors[i] = ColorUtil.getRandomColor();
             i++;
         }
     }

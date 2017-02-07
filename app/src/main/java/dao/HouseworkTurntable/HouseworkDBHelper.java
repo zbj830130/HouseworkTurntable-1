@@ -22,7 +22,7 @@ public class HouseworkDBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         try {
             sql = "CREATE TABLE " + table_name + " (" +
-                    "id            INTEGER         PRIMARY KEY ," +
+                    "_id            INTEGER         PRIMARY KEY ," +
                     "name        VARCHAR(50)        NOT NULL ," +
                     "isSelected  Boolean            NULL )";
 
