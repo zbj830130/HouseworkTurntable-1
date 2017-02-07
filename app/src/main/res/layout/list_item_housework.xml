@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+    <CheckBox
+        android:id="@+id/list_item_housework_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="4dp"/>
+
+    <TextView
+        android:id="@+id/list_item_housework_name_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/list_item_housework_check_box"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="@color/colorListText"
+        android:padding="4dp"
+        tools:text="Homework Name"/>
+
+</RelativeLayout>

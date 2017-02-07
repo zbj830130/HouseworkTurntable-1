@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HouseworkTurntable</string>
+    <string name="title_activity_options_list">OptionsList</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="navigation_turntable">Turn Table</string>
+    <string name="navigation_chart">Chart</string>
+    <string name="title_activity_houseworks">Housework</string>
+    <string name="menu_button_add_item">New Housework</string>
+    <string name="menu_button_run">Run</string>
+
+    <string name="housework_item_name">Name</string>
+    <string name="housework_name_hint">Enter a name for the housework</string>
+    <string name="housework_item_selected">Selected</string>
+    <string name="title_activity_housework_item_view_page">HouseworkItemViewPageActivity</string>
+    <string name="title_activity_chart">Chart</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
