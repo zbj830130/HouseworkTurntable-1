@@ -57,6 +57,8 @@ public class HouseworkItemActivity extends AppCompatActivity {
 
                 int id = bus.addItem(name, mSelected.isChecked());
                 mChartBus.addItem(id, mTitleField.getText().toString());
+
+                Toast.makeText(getApplicationContext(), "Created Successed", Toast.LENGTH_LONG).show();
             }
         });
 

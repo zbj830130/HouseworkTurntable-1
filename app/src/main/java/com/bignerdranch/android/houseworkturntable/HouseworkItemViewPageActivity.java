@@ -88,6 +88,8 @@ public class HouseworkItemViewPageActivity extends AppCompatActivity {
                             name, hwSelected.isChecked());
 
                     new ChartBus(getApplicationContext()).updateHWName(itemId, name.toString());
+
+                    Toast.makeText(getApplicationContext(), "Modify Successed", Toast.LENGTH_LONG).show();
                 }
             });
 
