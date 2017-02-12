@@ -1,14 +1,9 @@
 package com.bignerdranch.android.houseworkturntable;
 
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
@@ -20,7 +15,7 @@ import models.HouseworkTurntable.HouseworkItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int countDown = 5;
+    private int countDown = 10;
     private TextView mCountDown;
 
     @Override
