@@ -39,7 +39,7 @@ public class HouseworkPanBusiness extends SurfaceView implements SurfaceHolder.C
 
     private int[] mImgs = null;
 
-    private int[] mColors;// = new int[]{0xFFFFC300, 0xFFF17E01, 0xFFFFC300, 0xFFF17E01, 0xFFFFC300, 0xFFF17E01, 0xFFFFC300};
+    private int[] mColors;
 
 
     private int mItemCount = 0;
