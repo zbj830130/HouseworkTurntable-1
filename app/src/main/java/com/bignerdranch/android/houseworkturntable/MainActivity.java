@@ -15,7 +15,7 @@ import models.HouseworkTurntable.HouseworkItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int countDown = 10;
+    private int countDown = 7;
     private TextView mCountDown;
 
     @Override

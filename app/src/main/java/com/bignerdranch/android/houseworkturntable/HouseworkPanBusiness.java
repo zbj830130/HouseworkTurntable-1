@@ -306,7 +306,7 @@ public class HouseworkPanBusiness extends SurfaceView implements SurfaceHolder.C
 
 
     private void drawBg() {
-        mCanvas.drawColor(0xffffffff);
+        mCanvas.drawColor(0xfffbfbfb);
         mCanvas.drawBitmap(mBgBitmap, null, new Rect(mPadding / 2,
                 mPadding / 2, getMeasuredWidth() - mPadding / 2,
                 getMeasuredHeight() - mPadding / 2), null);
